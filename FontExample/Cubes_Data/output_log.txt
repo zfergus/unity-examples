@@ -1,0 +1,37 @@
+Initialize engine version: 5.1.1f1 (2046fc06d4d8)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) Iris(TM) Pro Graphics 5200 (ID=0xd22)
+    Vendor:   Intel
+    VRAM:     896 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: E:\IDTech\Unity\FontExample\Cubes_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading E:\IDTech\Unity\FontExample\Cubes_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: E:\IDTech\Unity\FontExample\Cubes_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading E:\IDTech\Unity\FontExample\Cubes_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: E:\IDTech\Unity\FontExample\Cubes_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading E:\IDTech\Unity\FontExample\Cubes_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: E:\IDTech\Unity\FontExample\Cubes_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading E:\IDTech\Unity\FontExample\Cubes_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: E:\IDTech\Unity\FontExample\Cubes_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading E:\IDTech\Unity\FontExample\Cubes_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+Platform assembly: E:\IDTech\Unity\FontExample\Cubes_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading E:\IDTech\Unity\FontExample\Cubes_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: E:\IDTech\Unity\FontExample\Cubes_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading E:\IDTech\Unity\FontExample\Cubes_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.069 seconds
+desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: E:\IDTech\Unity\FontExample\Cubes_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: E:\IDTech\Unity\FontExample\Cubes_Data\Managed\System.dll (this message is harmless)
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 1570 -> priority: 1 
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.114203 ms
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 212.
+Total: 0.203752 ms (FindLiveObjects: 0.009883 ms CreateObjectMapping: 0.027749 ms MarkObjects: 0.160036 ms  DeleteObjects: 0.004941 ms)
+
