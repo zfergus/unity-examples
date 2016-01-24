@@ -5,8 +5,6 @@ teaching Unity. These example are great sources for some of the most common
 questions and problems encountered while starting to use Unity. Feel free to 
 expand and create upon them as needed.
 
-<hr>
-
 ## Examples
 
 ### Audio
@@ -54,8 +52,6 @@ how to use materials and textures to change the appearance of primitive game
 objects. Also shows how to use normal mappings to create more realistic 3D 
 objects and worlds.
 
-<hr>
-
 ## Games
 
 ### Asteroids
@@ -77,8 +73,6 @@ movements and mouse assisted aiming. Tanks is a top down version and
 Tanks3rdPerson is, as the name implies, a third person version. These examples 
 are great for learning about simple movement using keyboard controls, and 
 more complex controls using ray casting to aim using the mouse.
-
-<hr>
 
 ## Packages
 
