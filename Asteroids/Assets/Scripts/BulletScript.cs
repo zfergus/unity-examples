@@ -6,22 +6,23 @@ public class BulletScript : MonoBehaviour
 	/* Destroy this bullet in 5 seconds. */
 	void Start()
 	{
+		this.GetComponent<Rigidbody> ().AddForce (1000 * (this.transform.rotation * Vector3.up));
+
 		/* Call CleanUp in 5 seconds. */
-		Invoke ("CleanUp", 5);
+		//Invoke ("CleanUp", 5);
 	}
 
 	/* Move the bullet forward every frame. */
 	void Update ()
 	{
-		this.transform.Translate (Vector3.up * 20 * Time.deltaTime);
-
 		/* Destroy the bullet if it leaves the screen. */
 		Vector3 viewportCoords = Camera.main.WorldToViewportPoint (this.transform.position);
-		if (viewportCoords.x < 0 || viewportCoords.x > 1 ||
-			viewportCoords.y < 0 || viewportCoords.y > 1   ) 
+		if (!Utils.isInViewport(viewportCoords)) 
 		{
-			Destroy (this.gameObject);
+			CleanUp ();
 		}
+
+		print (this.GetComponent<Rigidbody> ().velocity);
 	}
 
 	/* Destroys this bullet in order to free up memory. */
@@ -34,11 +35,15 @@ public class BulletScript : MonoBehaviour
 	}
 
 	/* On collision with a rigidbody destroy it if it is an asteroid. */
-	void OnCollisionEnter(Collision col)
+	void OnTriggerEnter(Collider col)
 	{
 		if (col.gameObject.tag == "Asteroid")
 		{
-			Destroy (col.gameObject);
+			col.gameObject.GetComponent<AsteroidLives> ().
+				TakeDamage (1, this.GetComponent<Rigidbody>().velocity);
+
+			GameObject.FindGameObjectWithTag ("SoundManager").GetComponent<AudioSource> ().Play ();
+
 			Destroy (this.gameObject);
 		}
 	}

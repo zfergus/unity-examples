@@ -3,7 +3,7 @@ using System.Collections;
 
 public class WrapScreen : MonoBehaviour
 {
-	Renderer[] renderers;
+	Transform[] transforms;
 
 	bool isWrappingX, isWrappingY;
 
@@ -13,14 +13,14 @@ public class WrapScreen : MonoBehaviour
 		isWrappingX = false;
 		isWrappingY = false;
 
-		renderers = this.GetComponentsInChildren<Renderer>();
+		transforms = this.GetComponentsInChildren<Transform>();
 	}
 
-	bool CheckRenders()
+	bool CheckChildren()
 	{
-		foreach(Renderer r in renderers)
+		foreach(Transform t in transforms)
 		{
-			if (r.isVisible)
+			if (Utils.isInViewport(Camera.main.WorldToViewportPoint(t.position)))
 			{
 				return true;
 			}
@@ -32,7 +32,7 @@ public class WrapScreen : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		bool isVisible = CheckRenders ();
+		bool isVisible = CheckChildren();
 
 		if (isVisible)
 		{
@@ -46,15 +46,20 @@ public class WrapScreen : MonoBehaviour
 			return;
 		}
 
-		Vector3 pos = this.gameObject.GetComponent<Transform> ().position;
+		Vector3 pos = this.transform.position;
 		Vector3 viewportPos = Camera.main.WorldToViewportPoint (pos);
 
 		if (!isWrappingX && (viewportPos.x < 0 || viewportPos.x > 1))
 		{
 			pos.x = -pos.x;
 			isWrappingX = true;
-		} 
+		}
+		if (!isWrappingY && (viewportPos.y < 0 || viewportPos.y > 1))
+		{
+			pos.y = -pos.y;
+			isWrappingY = true;
+		}
 
-		this.gameObject.GetComponent<Transform> ().position = pos;
+		this.transform.position = pos;
 	}
 }

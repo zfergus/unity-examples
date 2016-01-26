@@ -13,6 +13,7 @@ public class PlayerShoot : MonoBehaviour
 		{
 			/* Create a bullet at the spawn point with the same rotation as the ship. */
 			Instantiate(bullet, spawnPosObj.transform.position, this.transform.rotation);
+			this.GetComponent<AudioSource> ().Play ();
 		}
 	}
 }
