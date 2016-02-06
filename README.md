@@ -36,7 +36,7 @@ move towards script and, therefore, has no path finding or obstacle avoidance.
 This example also includes a simple 2D game where the player evades an enemy 
 chasing after them.
 
-(**Note**: This an original script, if a bug is found pleas report it.) 
+(**Note**: This is an original script, if any bugs are found please report them.) 
 
 ### GravityBox
 
