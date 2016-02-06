@@ -26,6 +26,18 @@ an example uses of joysticks, direction pads, and buttons.
 (**Note**: These inputs and sprites are of my own creation and differ from the 
 standard asset one, so they may contain a couple of bugs) 
 
+### Enemy Follow
+
+A useful script for having a GameObject follow another GameObject's transform. 
+The script also includes parameters for a target tag, speed to follow at, and a
+minimum distance away from the target to start following. Note this is a simple 
+move towards script and, therefore, has no path finding or obstacle avoidance.
+
+This example also includes a simple 2D game where the player evades an enemy 
+chasing after them.
+
+(**Note**: This an original script, if a bug is found pleas report it.) 
+
 ### GravityBox
 
 An example of using the accelerometer of a phone or mobile device to move and 
