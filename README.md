@@ -1,9 +1,9 @@
 # Unity-Examples
 
-This is a collection of some useful examples and tutorials I created Summer 2015
-teaching Unity. These example are great sources for some of the most common 
-questions and problems encountered while starting to use Unity. Feel free to 
-expand and create upon them as needed.
+This is a collection of some useful examples and tutorials I created teaching
+Unity in Summer 2015. These example are great sources for some of the most 
+common questions and problems encountered while starting to use Unity. Feel 
+free to expand and create upon them as needed.
 
 ## Examples
 
@@ -24,7 +24,7 @@ Example uses of touch screen controls to interact with the game world. Includes
 an example uses of joysticks, direction pads, and buttons. 
 
 (**Note**: These inputs and sprites are of my own creation and differ from the 
-standard asset one, so they may contain a couple of bugs) 
+standard asset versions, so they may contain a couple of bugs) 
 
 ### Enemy Follow
 
@@ -40,10 +40,10 @@ chasing after them.
 
 ### GravityBox
 
-An example of using the accelerometer of a phone or mobile device to move and 
-control objects. In this example, the game world contains several spheres with 
-the accelerometer controlling the direction of gravity. In effect, creating a 
-simulated 3D environment that is affected by the real world.
+An example using the accelerometer of a phone or mobile device to move and 
+control objects. In this example, the game world contains several spheres and 
+the accelerometer controlling the direction of gravity. This effectivly creates 
+a simulated 3D environment that is affected by the real world.
 
 ### Packages 
 
@@ -55,11 +55,11 @@ standard assets.
 
 These examples contains some of the most useful aspects of Unity's realistic 
 physics. Contained are examples uses of forces, rigid bodies, collision 
-detection, triggers, and more physical properties. 
+detection, triggers, and more physical properties.
 
 ### Textures
 
-This is and example of many common in engine texturing abilities. Demonstrates 
+This is an example of many common in engine texturing abilities. Demonstrates 
 how to use materials and textures to change the appearance of primitive game 
 objects. Also shows how to use normal mappings to create more realistic 3D 
 objects and worlds.
@@ -75,16 +75,16 @@ keyboard input, this game is a great starting point for a space-ship shooter.
 
 Another classic game recreated using Unity. Containg many different elements, 
 this game is a goto when first learning, or teaching, Unity. It covers important 
-aspects of game creation from controls and spawning prefabs to collision 
-detection and simple enemy AI.
+aspects of game creation incuding controls, spawning prefabs, collision 
+detection, and simple enemy AI.
 
 ### Tanks and Tanks3rdPerson
 
-These are pair of example tank games that can be used to learn physics based 
+These are a pair of example tank games that can be used to learn physics based 
 movements and mouse assisted aiming. Tanks is a top down version and 
 Tanks3rdPerson is, as the name implies, a third person version. These examples 
 are great for learning about simple movement using keyboard controls, and 
-more complex controls using ray casting to aim using the mouse.
+more complex controls using a mouse and ray casting to aim.
 
 ## Packages
 
