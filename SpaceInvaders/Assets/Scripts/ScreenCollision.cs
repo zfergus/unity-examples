@@ -24,5 +24,9 @@ public class ScreenCollision : MonoBehaviour
 				timer = 0.0f;
 			}
         }
+		else if(Camera.main.WorldToViewportPoint(this.transform.position).y < 0.05f)
+		{
+			PlayerMovement.GameOver();
+		}
     }
 }

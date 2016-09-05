@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
 		livesText.text = "Lives: " + lives + "\nScore: " + score;
 
 		if (lives <= 0)
-			SceneManager.LoadScene ("GameOver");
+			GameOver();
 		if(GameObject.FindGameObjectWithTag ("Enemy") == null)
 			SceneManager.LoadScene ("WinScene");
 	}
@@ -52,5 +52,10 @@ public class PlayerMovement : MonoBehaviour
 	public static int GetScore()
 	{
 		return score;
+	}
+
+	public static void GameOver()
+	{
+		SceneManager.LoadScene("GameOver");
 	}
 }

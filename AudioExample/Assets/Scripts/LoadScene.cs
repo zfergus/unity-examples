@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class LoadScene : MonoBehaviour
@@ -13,7 +14,7 @@ public class LoadScene : MonoBehaviour
 		if (sceneName != null && sceneName != "")
 		{
 			/* Open the specified scene. */
-			Application.LoadLevel (sceneName);
+			SceneManager.LoadScene(sceneName);
 		}
 		else
 		{
