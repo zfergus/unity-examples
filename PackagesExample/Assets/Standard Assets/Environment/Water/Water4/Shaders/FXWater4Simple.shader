@@ -1,3 +1,6 @@
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 Shader "FX/SimpleWater4" {
 Properties {
 	_ReflectionTex ("Internal reflection", 2D) = "white" {}
@@ -124,7 +127,7 @@ CGINCLUDE
 	{
 		v2f o;
 		
-		half3 worldSpaceVertex = mul(_Object2World,(v.vertex)).xyz;
+		half3 worldSpaceVertex = mul(unity_ObjectToWorld,(v.vertex)).xyz;
 		half3 vtxForAni = (worldSpaceVertex).xzz;
 
 		half3 nrml;
@@ -148,7 +151,7 @@ CGINCLUDE
 
 		o.viewInterpolator.xyz = worldSpaceVertex - _WorldSpaceCameraPos;
 
-		o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+		o.pos = UnityObjectToClipPos(v.vertex);
 
 		ComputeScreenAndGrabPassPos(o.pos, o.screenPos, o.grabPassPos);
 		
@@ -223,7 +226,7 @@ CGINCLUDE
 	{
 		v2f_noGrab o;
 		
-		half3 worldSpaceVertex = mul(_Object2World,(v.vertex)).xyz;
+		half3 worldSpaceVertex = mul(unity_ObjectToWorld,(v.vertex)).xyz;
 		half3 vtxForAni = (worldSpaceVertex).xzz;
 
 		half3 nrml;
@@ -246,7 +249,7 @@ CGINCLUDE
 
 		o.viewInterpolator.xyz = worldSpaceVertex - _WorldSpaceCameraPos;
 
-		o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+		o.pos = UnityObjectToClipPos(v.vertex);
 
 		o.screenPos = ComputeScreenPos(o.pos);
 		
@@ -308,14 +311,14 @@ CGINCLUDE
 	{
 		v2f_simple o;
 		
-		half3 worldSpaceVertex = mul(_Object2World, v.vertex).xyz;
+		half3 worldSpaceVertex = mul(unity_ObjectToWorld, v.vertex).xyz;
 		half2 tileableUv = worldSpaceVertex.xz;
 
 		o.bumpCoords.xyzw = (tileableUv.xyxy + _Time.xxxx * _BumpDirection.xyzw) * _BumpTiling.xyzw;
 
 		o.viewInterpolator.xyz = worldSpaceVertex-_WorldSpaceCameraPos;
 		
-		o.pos = mul(UNITY_MATRIX_MVP,  v.vertex);
+		o.pos = UnityObjectToClipPos(v.vertex);
 		
 		UNITY_TRANSFER_FOG(o,o.pos);
 		return o;

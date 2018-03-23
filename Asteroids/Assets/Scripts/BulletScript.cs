@@ -17,12 +17,10 @@ public class BulletScript : MonoBehaviour
 	{
 		/* Destroy the bullet if it leaves the screen. */
 		Vector3 viewportCoords = Camera.main.WorldToViewportPoint (this.transform.position);
-		if (!Utils.isInViewport(viewportCoords)) 
+		if (!Utils.isInViewport(viewportCoords))
 		{
 			CleanUp ();
 		}
-
-		print (this.GetComponent<Rigidbody> ().velocity);
 	}
 
 	/* Destroys this bullet in order to free up memory. */
