@@ -1,4 +1,4 @@
-# Unity-Examples
+# Unity Examples
 
 This is a collection of some useful examples and tutorials I created teaching
 Unity in Summer 2015. These example are great sources for some of the most 
