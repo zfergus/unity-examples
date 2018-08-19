@@ -1,8 +1,8 @@
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
- * MoveTowards.cs
- * Script for moving a GameObject towards another GameObject. Also rotates the 
- * game object towards the target.
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/*
+MoveTowards.cs
+Script for moving a GameObject towards another GameObject. Also rotates the
+game object towards the target.
+*/
 
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -18,12 +18,28 @@ public class MoveTowards : MonoBehaviour
 	public float speed = 10.0f;
 	/* Float value for the minimum distance to follow behind. */
 	public float minDistance = 0.0f;
+	/* Should the position be randomized at the start of the game? */
+	public bool isPosRandom = true;
+	/* Minimum distance from the target if a random position is used. */
+	public float startMinDistance = 5.0f;
 
 	private Rigidbody myRigidbody;
 
 	void Start()
 	{
 		this.myRigidbody = this.GetComponent<Rigidbody>();
+		if(this.isPosRandom){
+			do{
+				float margin = 10.0f;
+				Vector3 screenPosition = Camera.main.ScreenToWorldPoint(
+					new Vector3(Random.Range(margin, Screen.width - margin),
+								Random.Range(margin, Screen.height - margin),
+								Camera.main.transform.position.y));
+				screenPosition.y = 0;
+				this.transform.position = screenPosition;
+			}while(Vector3.Magnitude(this.transform.position -
+				this.target.position) < this.startMinDistance);
+		}
 	}
 
 	/* Moves this object towards the target every frame. */
@@ -34,10 +50,10 @@ public class MoveTowards : MonoBehaviour
 		{
 			/* A float for the amount to step per frame. */
 			float step = speed * Time.deltaTime;
-			
+
 			/* Turn this object to face the target. */
 			Vector3 targetDir = target.position - this.transform.position;
-			Vector3 newDir = 
+			Vector3 newDir =
 				Vector3.RotateTowards(transform.forward, targetDir, step, 0.0F);
 			//newDir.x = this.transform.eulerAngles.x;
 			//newDir.z = this.transform.eulerAngles.z;

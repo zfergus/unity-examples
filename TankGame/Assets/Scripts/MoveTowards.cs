@@ -1,6 +1,6 @@
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * MoveTowards.cs
- * Script for moving a GameObject towards another GameObject. Also rotates the 
+ * Script for moving a GameObject towards another GameObject. Also rotates the
  * game object towards the target.
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
@@ -31,13 +31,13 @@ public class MoveTowards : MonoBehaviour
 
 			/* Turn this object to face the target. */
 			Quaternion rotationAngle = Quaternion.LookRotation(targetDir);
-			transform.rotation = Quaternion.Slerp(this.transform.rotation, 
+			transform.rotation = Quaternion.Slerp(this.transform.rotation,
 			                                      rotationAngle, Time.deltaTime * rotSpeed);
 
 			if(targetDir.magnitude > 25)
 			{
 				/* Translate this object towards the target object. */
-				Vector3 towardsVector = Vector3.MoveTowards(this.transform.position, 
+				Vector3 towardsVector = Vector3.MoveTowards(this.transform.position,
 				                                            target.transform.position,
 				                                            Time.deltaTime * speed);
 				towardsVector.y = 0;

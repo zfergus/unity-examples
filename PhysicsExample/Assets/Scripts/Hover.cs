@@ -17,8 +17,8 @@ public class Hover : MonoBehaviour
 			}
 			else
 			{
-				Debug.LogWarning("Fan object, " + fan.name + 
-					", missing FanSpin script.");
+				Debug.LogWarning(
+					"Fan object, " + fan.name + ", missing FanSpin script.");
 			}
 		}
 	}
@@ -35,8 +35,8 @@ public class Hover : MonoBehaviour
 	{
 		if (other.tag == "Hoverable")
 		{
-			other.GetComponent<Rigidbody> ().AddForce (Vector3.up * this.force,
-				ForceMode.Force);
+			other.GetComponent<Rigidbody> ().AddForce (
+				Vector3.up * this.force, ForceMode.Force);
 		}
 	}
 

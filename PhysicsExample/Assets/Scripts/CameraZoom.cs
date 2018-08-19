@@ -10,7 +10,7 @@ public class CameraZoom : MonoBehaviour
 		{
 			this.transform.Translate(Vector3.forward * 10 * Time.deltaTime);
 		}
-		else if(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.DownArrow))
+		else if(Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
 		{
 			this.transform.Translate(Vector3.back * 10 * Time.deltaTime);
 		}

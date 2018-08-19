@@ -17,7 +17,7 @@ public class BulletHit : MonoBehaviour
 			{
 				Debug.LogWarning("No EnemyHealth found on EnemyTank.");
 			}
-			Destroy(this.gameObject);
 		}
+		Destroy(this.gameObject);
 	}
 }

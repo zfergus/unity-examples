@@ -19,15 +19,17 @@ public class PlayerMovement : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		if ((Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.LeftArrow)) && 
+		if ((Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.LeftArrow)) &&
 			Camera.main.WorldToViewportPoint( this.transform.position ).x > 0.05f) {
-			transform.Translate(Vector3.left * speed * Time.deltaTime);
+				this.GetComponent<Rigidbody>().MovePosition(this.transform.position +
+					Vector3.left * speed * Time.deltaTime);
 		}
-		if ((Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.RightArrow)) && 
+		if ((Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.RightArrow)) &&
 			Camera.main.WorldToViewportPoint( this.transform.position ).x < 0.95f) {
-			transform.Translate(Vector3.right * speed * Time.deltaTime);
+				this.GetComponent<Rigidbody>().MovePosition(this.transform.position +
+					Vector3.right * speed * Time.deltaTime);
 		}
-		
+
 		livesText.text = "Lives: " + lives + "\nScore: " + score;
 
 		if (lives <= 0)
@@ -35,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
 		if(GameObject.FindGameObjectWithTag ("Enemy") == null)
 			SceneManager.LoadScene ("WinScene");
 	}
-	
+
 	public void LoseLive()
 	{
 		if(lives > 0)

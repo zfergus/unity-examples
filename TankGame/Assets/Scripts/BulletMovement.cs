@@ -13,9 +13,10 @@ public class BulletMovement : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		this.transform.Translate (Vector3.forward * speed * Time.deltaTime);
+		this.GetComponent<Rigidbody>().MovePosition(this.transform.position +
+			this.transform.forward * speed * Time.deltaTime);
 	}
-	
+
 	void DestroyBullet()
 	{
 		Destroy (this.gameObject);

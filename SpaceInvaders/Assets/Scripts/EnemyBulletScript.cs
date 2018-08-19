@@ -1,8 +1,8 @@
 using UnityEngine;
 using System.Collections;
- 
-public class EnemyBulletScript : MonoBehaviour 
-{ 
+
+public class EnemyBulletScript : MonoBehaviour
+{
 	private PlayerMovement playerScript;
 
 	void Start()
@@ -12,9 +12,10 @@ public class EnemyBulletScript : MonoBehaviour
 	}
 
     // Update is called once per frame
-    void Update () 
+    void Update ()
     {
-        transform.Translate(Vector3.down * 10 * Time.deltaTime);
+        this.GetComponent<Rigidbody>().MovePosition(this.transform.position +
+            Vector3.down * 10 * Time.deltaTime);
         if(Camera.main.WorldToViewportPoint(this.transform.position).y < 0)
         {
             Destroy(this.gameObject);

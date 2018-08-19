@@ -19,9 +19,8 @@ public class PlayerBehavior : MonoBehaviour
 			/* If W or Up pressed move forwards. */
 			if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.UpArrow))
 			{
-				//this.transform.Translate(Vector3.up * speed * Time.deltaTime);
 				Quaternion rot = this.transform.rotation;
-				this.GetComponent<Rigidbody> ().AddForce (rot * Vector3.up * speed);
+				this.GetComponent<Rigidbody>().AddForce(rot * Vector3.up * speed);
 			}
 		}
 

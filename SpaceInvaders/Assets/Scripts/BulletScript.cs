@@ -1,12 +1,13 @@
 using UnityEngine;
 using System.Collections;
- 
-public class BulletScript : MonoBehaviour 
+
+public class BulletScript : MonoBehaviour
 {
     // Update is called once per frame
-    void Update () 
+    void Update ()
     {
-        transform.Translate(Vector3.up * 10 * Time.deltaTime);
+        this.GetComponent<Rigidbody>().MovePosition(this.transform.position +
+            Vector3.up * 10 * Time.deltaTime);
         if(Camera.main.WorldToViewportPoint(this.transform.position).y > 1)
         {
             Destroy(this.gameObject);
