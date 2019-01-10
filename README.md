@@ -14,7 +14,7 @@ effects to looping background music.
 
 ### Camera
 
-<img src="screenshots/CameraExample.png" width="100%">
+<p align="center"><img src="screenshots/CameraExample.png" width="75%"></p>
 
 Some more complex (and "experimental") utilizations of the camera(s) in a 3D
 game world. Topics covered include: mini-maps, camera zooming, and mirroring
@@ -22,7 +22,7 @@ game world. Topics covered include: mini-maps, camera zooming, and mirroring
 
 ### Cross Platform Input
 
-<img src="screenshots/JoyStick.png" width="100%">
+<p align="center"><img src="screenshots/JoyStick.png" width="75%"></p>
 
 Example uses of touch screen controls to interact with the game world. Includes
 an example uses of joysticks, direction pads, and buttons.
@@ -44,7 +44,7 @@ chasing after them.
 
 ### GravityBox
 
-<img src="screenshots/GravityBox.png" width="100%">
+<p align="center"><img src="screenshots/GravityBox.png" width="75%"></p>
 
 An example using the accelerometer of a phone or mobile device to move and
 control objects. In this example, the game world contains several spheres and
@@ -59,17 +59,17 @@ standard assets.
 
 ### Physics
 
-<img src="screenshots/PhysicsExample-1.png" width="100%">
+<p align="center"><img src="screenshots/PhysicsExample-1.png" width="75%"></p>
 
 These examples contains some of the most useful aspects of Unity's realistic
 physics. Contained are examples uses of forces, rigid bodies, collision
 detection, triggers, and more physical properties.
 
-<img src="screenshots/PhysicsExample-2.png" width="100%">
+<p align="center"><img src="screenshots/PhysicsExample-2.png" width="75%"></p>
 
 ### Textures
 
-<img src="screenshots/TextureExample.png" width="100%">
+<p align="center"><img src="screenshots/TextureExample.png" width="75%"></p>
 
 This is an example of many common in engine texturing abilities. Demonstrates
 how to use materials and textures to change the appearance of primitive game
@@ -80,14 +80,14 @@ objects and worlds.
 
 ### Asteroids
 
-<img src="screenshots/asteroids@3022x1700.png" width="100%">
+<p align="center"><img src="screenshots/asteroids@3022x1700.png" width="75%"></p>
 
 The classics arcade game recreated in Unity. A top-down 3D game controlled by
 keyboard input, this game is a great starting point for a space-ship shooter.
 
 ### Space Invaders
 
-<img src="screenshots/SpaceInvaders.png" width="100%">
+<p align="center"><img src="screenshots/SpaceInvaders.png" width="75%"></p>
 
 Another classic game recreated using Unity. Containg many different elements,
 this game is a goto when first learning, or teaching, Unity. It covers important
@@ -96,8 +96,8 @@ detection, and simple enemy AI.
 
 ### Tanks and Tanks3rdPerson
 
-<img src="screenshots/TankGame.png" width="100%">
-<img src="screenshots/TankGame3rdPS.png" width="100%">
+<p align="center"><img src="screenshots/TankGame.png" width="75%"></p>
+<p align="center"><img src="screenshots/TankGame3rdPS.png" width="75%"></p>
 
 These are a pair of example tank games that can be used to learn physics based
 movements and mouse assisted aiming. Tanks is a top down version and
